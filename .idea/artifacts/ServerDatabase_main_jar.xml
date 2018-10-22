@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ServerDatabase_main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ServerDatabase_main_jar</output-path>
+    <root id="archive" name="ServerDatabase_main.jar">
+      <element id="module-output" name="ServerDatabase_main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/6.0.6/1d19b184dbc596008cc71c83596f051c3ec4097f/mysql-connector-java-6.0.6.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
