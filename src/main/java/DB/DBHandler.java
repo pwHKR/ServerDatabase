@@ -13,8 +13,10 @@ public class DBHandler {
 
     private Connection conn;
 
+    private static DBHandler instance;
 
-    public DBHandler() {
+
+    private DBHandler() {
         dbName = "Smarthouse";
         dbUser = "peter";
         dbPassword ="123limboMYSQL";
@@ -32,7 +34,25 @@ public class DBHandler {
 
             System.out.println("Connected");
         }
+
+        else {
+            System.out.println("Failed to connect");
+        }
     }
+
+
+    public static DBHandler getInstance(){
+
+        if(instance == null){
+
+            instance = new DBHandler();
+        }
+
+        return instance;
+    }
+
+
+
 
 
 }
