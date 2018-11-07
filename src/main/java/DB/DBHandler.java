@@ -1,8 +1,6 @@
 package DB;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DBHandler {
 
@@ -51,8 +49,23 @@ public class DBHandler {
         return instance;
     }
 
+    public void updateLampStatus(String value, String device){
 
 
+            String query = ("UPDATE device SET Value=? WHERE Name =?;");
 
+        PreparedStatement ps = null;
+        try {
+            ps = conn.prepareStatement(query);
 
-}
+        ps.setString(1,value);
+            ps.setString(2,device);
+
+           ps.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        }
+    }
+
