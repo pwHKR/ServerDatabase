@@ -1,16 +1,13 @@
-import Arduino.SenderReceiver;
-import DB.DBHandler;
-import com.fazecast.jSerialComm.SerialPort;
-
-import java.io.InputStream;
+import Arduino.ComTalker;
 
 public class Main {
 
     public static void main(String[] args) {
-        Server server = new Server();
-        server.run();
-        SenderReceiver senderReceiver = new SenderReceiver();
+      //  Server server = new Server();
+       // server.run();
+        ComTalker comTalker = new ComTalker();
 
+    
 
     }
 }
