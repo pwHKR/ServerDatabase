@@ -6,7 +6,7 @@ public class Main {
       //  Server server = new Server();
        // server.run();
         ComTalker comTalker = new ComTalker();
-
+        comTalker.turnLightOn();
     
 
     }

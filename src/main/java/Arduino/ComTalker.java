@@ -9,6 +9,7 @@ public class ComTalker {
     SerialPort comPort;
 
     public ComTalker() {
+        System.out.println(SerialPort.getCommPorts().toString());
         this.comPort = SerialPort.getCommPorts()[2];
 
         comPort.openPort();
