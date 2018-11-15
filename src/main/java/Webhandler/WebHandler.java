@@ -58,7 +58,9 @@ public class WebHandler {
                 BufferedReader br = new BufferedReader(isr);
 
                 String requestBody; // Denna kommer innehålla JSON stringen.
-                while ((requestBody = br.readLine())!=null) {
+                while ((requestBody = br.readLine())!=null ) {
+
+
 
                     DataStorage.getInstance().setLampChange(true);
 

@@ -16,6 +16,7 @@ public class ComTalker{
     }
 
     public void turnLightOff() {
+        System.out.println("Comtalker : TurnLight Off");
         try {
             comPort.getOutputStream().write('3');
 

@@ -1,9 +1,11 @@
+package Json;
+
 import DB.DBHandler;
 import com.google.gson.Gson;
 
-public class Server {
+public class JsonServer {
 
-    public Server() {
+    public JsonServer() {
 
     }
 

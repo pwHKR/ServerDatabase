@@ -8,6 +8,17 @@ public class DataStorage {
 
     private ComTalker cm;
 
+    private boolean testLamp;
+
+
+    public boolean isTestLamp() {
+        return testLamp;
+    }
+
+    public void setTestLamp(boolean testLamp) {
+        this.testLamp = testLamp;
+    }
+
     private boolean isLampChange;
 
     private boolean isLampOn;

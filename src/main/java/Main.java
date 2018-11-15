@@ -1,8 +1,6 @@
-import Arduino.ComTalker;
 import DataStorage.DataStorage;
+import RemoteServer.Connection.Server.MultiClientServer;
 import Webhandler.WebHandler;
-
-import java.io.IOException;
 
 
 public class Main {
@@ -13,19 +11,23 @@ public class Main {
         String type = "";
         String id = "";
         String value = "";
-        // Server server = new Server();
+        // Json.JsonServer server = new Json.JsonServer();
         // server.run();
         // ComTalker comTalker = new ComTalker();
 
         DataStorage.getInstance().setLampChange(false);
         DataStorage.getInstance().setLampOn(false);
+        DataStorage.getInstance().setTestLamp(false);
         WebHandler webHandler = new WebHandler();
 
+
+        MultiClientServer multiClientServer = new MultiClientServer();
+        multiClientServer.start();
 
 
 
         //ComTalker comTalker = new ComTalker();
-        try {
+        /*try {
 
             webHandler.startConnection();
 
@@ -34,7 +36,7 @@ public class Main {
         }
         System.out.println("Efter startConnection: "+webHandler.getJSON());
 
-        String jsonStringDefault = "{\"type\":\"operate\",\"id\":3}";
+        String jsonStringDefault = "{\"type\":\"operate\",\"id\":3}";*/
         //jsonString = webHandler.getJSON();
 
        // type = webHandler.myHandleJsonString(jsonString,"type");
