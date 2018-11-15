@@ -1,15 +1,16 @@
 package Arduino;
 
+import DataStorage.DataStorage;
 import com.fazecast.jSerialComm.SerialPort;
 
 import java.io.IOException;
 
-public class ComTalker {
+public class ComTalker{
 
     SerialPort comPort;
 
     public ComTalker() {
-        this.comPort = SerialPort.getCommPorts()[2];
+        this.comPort = SerialPort.getCommPorts()[0];
 
         comPort.openPort();
     }
@@ -39,9 +40,14 @@ public class ComTalker {
 
     }
 
-    public void turnLightOn() {
+    public  void turnLightOn() {
+
         try {
+
+            System.out.println("Comtalker : TurnLightOn");
             comPort.getOutputStream().write('3');
+
+
 
             comPort.getOutputStream().write('1');
             comPort.getOutputStream().flush();
@@ -50,7 +56,6 @@ public class ComTalker {
             while (comPort.getInputStream().available() < 2) {
 
             }
-
 
 
             byte[] input = new byte[comPort.getInputStream().available()];
@@ -63,7 +68,8 @@ public class ComTalker {
             e.printStackTrace();
         }
 
-    }
 
+
+    }
 
 }
