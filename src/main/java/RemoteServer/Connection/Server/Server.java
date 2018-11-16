@@ -1,9 +1,7 @@
 package RemoteServer.Connection.Server;
 
-import DataStorage.DataStorage;
-import RemoteServer.Model.Message;
+import RemoteServer.Model.Request;
 
-import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
@@ -34,11 +32,13 @@ public class Server extends Thread {
 
         try {
 
-                Message remote = null;
+                Request remote = null;
 
                 try {
-                    remote = (Message) in.readObject();
+                    remote = (Request) in.readObject();
                     System.out.println(remote.toString());
+
+                    /*
 
                     // Change if statments below to switch case...
                     if(remote.getRequest() == 1){
@@ -50,7 +50,7 @@ public class Server extends Thread {
                         System.out.println("turn off lamp0 sent from remote");
                         DataStorage.getInstance().getCm().turnLightOff();
 
-                    }
+                    }*/
 
                 } catch(IOException ex){ ex.printStackTrace();
                 }

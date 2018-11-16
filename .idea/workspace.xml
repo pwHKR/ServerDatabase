@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e07f4316-4e99-4fb8-b975-6712064abe44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/MultiClientServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RemoteServer/Model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RemoteServer/RequestList/Alarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RemoteServer/RequestList/Lamp.java" afterDir="false" />
+    <list default="true" id="b376e118-d742-46ed-bca8-c513119dbe14" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/RemoteServer/Model/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Arduino/ComTalker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Arduino/ComTalker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Arduino/ComTalker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Arduino/ComTalker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStorage/DataStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStorage/DataStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Json/JsonServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Arduino/ComTalker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Arduino/SenderReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Arduino/ComTalker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Arduino/SenderReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteServer/Model/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteServer/RequestList/Alarm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteServer/RequestList/Lamp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,93 +72,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="285">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/RequestList/Lamp.java">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state relative-caret-position="561">
+              <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DataStorage/DataStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#222#223#0" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Arduino/ComTalker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/MultiClientServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-166">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="49" column="78" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Json/JsonServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-58">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="WebHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="-51">
               <caret line="62" selection-start-line="62" selection-end-line="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Request.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Model/Request.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#472#473#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="52" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
       <list>
-        <option value="@pwHKR" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -338,7 +336,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6167375416659" />
+        <entry key="$USER_HOME$/.gradle/gradle.properties" value="865906375" />
+        <entry key="$PROJECT_DIR$" value="7698337522000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="3907457267" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2083459160" />
@@ -516,9 +515,9 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$USER_HOME$/Desktop/smarthouse_se2-master" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../RealSmartHome" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../RealSmartHome/ServerDatabase" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../smarthouse_se2-master" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -529,9 +528,12 @@
         <option value="$PROJECT_DIR$/src/main/java/RemoteServer/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/JsonServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Arduino/ComTalker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RemoteServer/Model/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Client/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RemoteServer/Model/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/Server.java" />
       </list>
     </option>
@@ -542,11 +544,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-578" />
-    <option name="y" value="-15" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="524" />
+    <option name="y" value="57" />
+    <option name="width" value="1440" />
+    <option name="height" value="783" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -554,79 +559,63 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Arduino" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="RemoteServer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="RemoteServer" type="462c0819:PsiDirectoryNode" />
               <item name="Connection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="RemoteServer" type="462c0819:PsiDirectoryNode" />
-              <item name="Connection" type="462c0819:PsiDirectoryNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ServerDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="From_Discord" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Webhandler" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -663,16 +652,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="ServerDatabase_main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <module name="ServerDatabase" />
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true" />
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -682,19 +674,19 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e07f4316-4e99-4fb8-b975-6712064abe44" name="Default Changelist" comment="" />
-      <created>1542229552695</created>
+      <changelist id="b376e118-d742-46ed-bca8-c513119dbe14" name="Default" comment="" />
+      <created>1542275085499</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1542229552695</updated>
-      <workItem from="1542229554147" duration="2373000" />
-      <workItem from="1542270654551" duration="2175000" />
-      <workItem from="1542278610243" duration="1258000" />
+      <updated>1542275085499</updated>
+      <workItem from="1542275087561" duration="2403000" />
+      <workItem from="1542348350200" duration="1044000" />
+      <workItem from="1542368870667" duration="5182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9888000" />
+    <option name="totallyTimeSpent" value="17661000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -706,39 +698,39 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="524" y="57" width="1440" height="783" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.20196672" />
-      <window_info id="Structure" order="1" sideWeight="0.5012225" side_tool="true" weight="0.22163388" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3295082" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924356" weight="0.3295082" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.3295082" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49924356" weight="0.3295082" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Statistic" order="7" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39969835" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37405732" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32880846" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32934928" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -757,71 +749,191 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added code for receiving data from remote server to labhall (raspberry pi)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code for receiving data from remote server to labhall (raspberry pi)" />
-  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Arduino/ComTalker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Arduino/ComTalker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server.java" />
+    <entry file="uml://JavaScript-modules-diagram//Users/woojen/Desktop/SDB/src/main/java/Arduino;/Users/woojen/Desktop/SDB/src/main/java/DataStorage;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main/java/Arduino;/Users/woojen/Desktop/SDB/src/main/java/DataStorage;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="540.0" y="295.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Arduino/ComTalker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Arduino">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Arduino</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">Arduino.ComTalker</node>
+            <node x="0.0" y="142.0">Arduino.SenderReceiver</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-212.0" y="113.0" />
+          <SelectedNodes>
+            <node>Arduino.ComTalker</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="52" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/RequestList/Lamp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="30">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/RequestList/Alarm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Webhandler/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="-51">
           <caret line="62" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="285">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/MultiClientServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-166">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="561">
+          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Json/JsonServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Model/Request.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="185">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Model/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="49" column="78" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Arduino/ComTalker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataStorage/DataStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="311">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>

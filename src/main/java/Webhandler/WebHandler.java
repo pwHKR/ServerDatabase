@@ -1,30 +1,23 @@
 package Webhandler;
 
-import Arduino.ComTalker;
 import DataStorage.DataStorage;
+import RemoteServer.Model.Request;
 import com.google.gson.Gson;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.*;
-import java.net.InetSocketAddress;
-
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
-import javax.xml.crypto.Data;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
 
 /**
  * Created by Marcus DataSysUtv on 2018-11-09.
  */
 public class WebHandler {
-    private String type = "";
-    private String deviceID = "";
-    private String value = "";
+
      public static String jsonString = "";
 
      //public ComTalker comTalker = new ComTalker();
@@ -51,6 +44,11 @@ public class WebHandler {
             public void handle(HttpExchange t) throws IOException {
 
 
+                WebHandler importJson = new WebHandler();
+
+
+
+
 
                 String response = "Status: Lamp on";
 
@@ -60,6 +58,8 @@ public class WebHandler {
                 String requestBody; // Denna kommer innehålla JSON stringen.
                 while ((requestBody = br.readLine())!=null ) {
 
+                   Request hej = importJson.myHandleJsonString(requestBody);
+
 
 
                     DataStorage.getInstance().setLampChange(true);
@@ -67,9 +67,11 @@ public class WebHandler {
                     DataStorage.getInstance().setLampOn(!DataStorage.getInstance().isLampOn());
 
                     if (!DataStorage.getInstance().isLampOn()){
-                        DataStorage.getInstance().getCm().turnLightOff();
+
+                        // Send Message with request code 2
+                      //  DataStorage.getInstance().getCm().turnLightOff();
                     } else {
-                        DataStorage.getInstance().getCm().turnLightOn();
+                       // DataStorage.getInstance().getCm().turnLightOn();
                     }
 
                     DataStorage.getInstance().setLampChange(false);
@@ -115,12 +117,17 @@ public class WebHandler {
            String theJSON = jsonString;
            return theJSON;
        }
-        public String myHandleJsonString(String jsonString, String wantedValue) {
+        public Request myHandleJsonString(String jsonString) {
             Gson gson = new Gson();
             String textJson = gson.toJson(jsonString);
             System.out.println(textJson);
             String[] splittedJson = textJson.split("\\W");
             String returnValue = "";
+
+            Request request = new Request(splittedJson[5],Integer.parseInt(splittedJson[11]),
+                    splittedJson[17]);
+
+            /*
 
             if (wantedValue == "type") {
                 returnValue = splittedJson[5];
@@ -132,7 +139,9 @@ public class WebHandler {
                 returnValue = splittedJson[17];
             }
 
-            return returnValue;
+            */
+
+            return request;
         }
 
     }
