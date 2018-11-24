@@ -1,5 +1,7 @@
 import DataStorage.DataStorage;
-import RemoteServer.Connection.Server.MultiClientServer;
+import RemoteCom.Connection.Client.Client;
+import RemoteCom.Connection.Server.MultiClientServer;
+import RemoteCom.Model.Request;
 import Webhandler.WebHandler;
 
 
@@ -21,8 +23,23 @@ public class Main {
         WebHandler webHandler = new WebHandler();
 
 
+       // Remote Com Test
+
+        Client connection = new Client();
+
         MultiClientServer multiClientServer = new MultiClientServer();
         multiClientServer.start();
+
+        Request test = new Request("lamp",1,"1");
+
+
+        // Main server application needs to be executed before the labHall application starts
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        connection.send(test);
 
 
 

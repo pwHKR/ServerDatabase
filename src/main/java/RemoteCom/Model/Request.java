@@ -1,4 +1,4 @@
-package RemoteServer.Model;
+package RemoteCom.Model;
 
 import java.io.Serializable;
 import java.util.Calendar;

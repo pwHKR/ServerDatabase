@@ -1,12 +1,12 @@
 package DataStorage;
-import Arduino.ComTalker;
+
 
 /**
  * Created by Marcus DataSysUtv on 2018-11-12.
  */
 public class DataStorage {
 
-    private ComTalker cm;
+
 
     private boolean testLamp;
 
@@ -45,11 +45,5 @@ public class DataStorage {
         return ourInstance;
     }
 
-    public ComTalker getCm() {
-        return cm;
-    }
 
-    private DataStorage() {
-        cm = new ComTalker();
-    }
 }

@@ -1,4 +1,4 @@
-package RemoteServer.Connection.Server;
+package RemoteCom.Connection.Server;
 
 import java.io.IOException;
 import java.net.ServerSocket;
