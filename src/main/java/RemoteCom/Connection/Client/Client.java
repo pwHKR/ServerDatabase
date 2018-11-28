@@ -1,10 +1,10 @@
 package RemoteCom.Connection.Client;
 
+import DataStorage.DataStorage;
 import RemoteCom.Model.Request;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -24,7 +24,8 @@ public class Client {
 
     private void establishContact() {
         try {
-            socket = new Socket(InetAddress.getLocalHost(), 5001);
+            //socket = new Socket(InetAddress.getLocalHost(), 5001);
+            socket = new Socket(DataStorage.getInstance().getClientIP(), 5001);
             out = new ObjectOutputStream(socket.getOutputStream());
             //in = new ObjectInputStream(socket.getInputStream());
         } catch (UnknownHostException e) {

@@ -1,5 +1,6 @@
 package RemoteCom.Connection.Server;
 
+import DataStorage.DataStorage;
 import RemoteCom.HandleRequest;
 import RemoteCom.Model.Request;
 
@@ -24,6 +25,9 @@ public class Server extends Thread {
             in = new ObjectInputStream(clientSocket.getInputStream());
 
             clientSocket.getInetAddress();
+            DataStorage.getInstance().setClientIP(clientSocket.getInetAddress().getHostAddress());
+            System.out.println(DataStorage.getInstance().getClientIP());
+
         } catch (IOException ioe) {
             System.out.println("Failed in creating streams");
             System.exit(-1);

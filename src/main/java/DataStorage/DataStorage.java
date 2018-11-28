@@ -7,6 +7,11 @@ package DataStorage;
 public class DataStorage {
 
 
+    private String clientIP;
+
+
+
+
 
     private boolean testLamp;
 
@@ -37,6 +42,14 @@ public class DataStorage {
 
     public void setLampChange(boolean lampChange) {
         isLampChange = lampChange;
+    }
+
+    public String getClientIP() {
+        return clientIP;
+    }
+
+    public void setClientIP(String clientIP) {
+        this.clientIP = clientIP;
     }
 
     private static DataStorage ourInstance = new DataStorage();

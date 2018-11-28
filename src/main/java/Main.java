@@ -23,9 +23,7 @@ public class Main {
         WebHandler webHandler = new WebHandler();
 
 
-       // Remote Com Test
 
-        Client connection = new Client();
 
         MultiClientServer multiClientServer = new MultiClientServer();
         multiClientServer.start();
@@ -39,6 +37,10 @@ public class Main {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        // Remote Com Test
+
+        Client connection = new Client();
         connection.send(test);
 
 
