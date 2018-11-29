@@ -16,9 +16,9 @@ public class DBHandler {
 
     private DBHandler() {
         dbName = "Smarthouse";
-        dbUser = "peter";
-        dbPassword ="123limboMYSQL";
-        connectionString =  "jdbc:mysql://127.0.0.1/" + dbName + "?user=" + dbUser + "&password=" + dbPassword + "&useSSL=false";
+        dbUser = "root";
+        dbPassword = "admin";
+        connectionString = "jdbc:mysql://127.0.0.1/" + dbName + "?user=" + dbUser + "&password=" + dbPassword + "&useSSL=false";
 
         try {
 
@@ -28,20 +28,18 @@ public class DBHandler {
         }
 
 
-        if(conn != null){
+        if (conn != null) {
 
             System.out.println("Connected");
-        }
-
-        else {
+        } else {
             System.out.println("Failed to connect");
         }
     }
 
 
-    public static DBHandler getInstance(){
+    public static DBHandler getInstance() {
 
-        if(instance == null){
+        if (instance == null) {
 
             instance = new DBHandler();
         }
@@ -49,23 +47,77 @@ public class DBHandler {
         return instance;
     }
 
-    public void updateLampStatus(String value, String device){
+    public void updateDeviceStatus(String id, String value) {
 
 
-            String query = ("UPDATE device SET Value=? WHERE Name =?;");
+        String query = ("UPDATE device SET Value=? WHERE id =?;");
 
         PreparedStatement ps = null;
         try {
             ps = conn.prepareStatement(query);
 
-        ps.setString(1,value);
-            ps.setString(2,device);
+            ps.setString(2, id);
+            ps.setString(1, value);
 
-           ps.execute();
+            ps.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
+    }
+
+    public String isSomethingOn(String id) {
+
+        int idInt = Integer.parseInt(id);
+        String query = ("Select Value from device where id = ?;");
+
+        PreparedStatement ps = null;
+        try {
+            ps = conn.prepareStatement(query);
+
+            ps.setInt(1, idInt);
+
+            ResultSet rs = ps.executeQuery();
+
+            rs.next();
+
+            String foundResult = rs.getNString("Value");
+
+
+            return foundResult;
+        } catch (SQLException e) {
+            return null;
         }
     }
+
+    public String login(String email, String passWord) {
+        // int idInt = Integer.parseInt(id);
+        String query = ("SELECT userName FROM user where `e-mail` = ? and passWord = ?;");
+
+        PreparedStatement ps = null;
+        try {
+            System.out.println("1");
+            ps = conn.prepareStatement(query);
+
+            ps.setString(1, email);
+            ps.setString(2, passWord);
+
+            ResultSet rs = ps.executeQuery();
+
+            //om användaren finns
+            if (rs.next()) {
+                String foundResult = rs.getString("userName");
+                return "exists";
+
+                //om användaren inte finns
+            } else {
+                return "doesn't exist";
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return "doesn't exist";
+    }
+}
 

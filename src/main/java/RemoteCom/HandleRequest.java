@@ -40,7 +40,9 @@ public class HandleRequest {
     private void handleDBCall(Request request){
 
         System.out.println("Reqeust sent " + request.getTime());
-        System.out.println("do something with DB" + request.getType());
+
+
+       // DBHandler.getInstance().updateLampStatus(request);
 
     }
 

@@ -25,6 +25,7 @@ public class Client {
     private void establishContact() {
         try {
             //socket = new Socket(InetAddress.getLocalHost(), 5001);
+            //socket = new Socket(DataStorage.getInstance().getClientIP(), 5001);
             socket = new Socket(DataStorage.getInstance().getClientIP(), 5001);
             out = new ObjectOutputStream(socket.getOutputStream());
             //in = new ObjectInputStream(socket.getInputStream());

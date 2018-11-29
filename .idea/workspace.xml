@@ -7,14 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b376e118-d742-46ed-bca8-c513119dbe14" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ServerDatabase_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStorage/DataStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStorage/DataStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/DB/DBHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/DB/DBHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DBHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/MultiClientServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/MultiClientServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RemoteCom/HandleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoteCom/HandleRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -72,8 +72,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-48">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="240">
+              <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -81,22 +81,23 @@
       <file leaf-file-name="DataStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DataStorage/DataStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
+            <state relative-caret-position="510">
               <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
               <folding>
-                <element signature="e#781#782#0" expanded="true" />
-                <element signature="e#829#830#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WebHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+            <state relative-caret-position="-830">
+              <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,22 +105,26 @@
       <file leaf-file-name="MultiClientServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/MultiClientServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state relative-caret-position="195">
+              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Request.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Model/Request.java">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="HandleRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/HandleRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="545">
+              <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="52" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -127,8 +132,8 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+            <state relative-caret-position="251">
+              <caret line="29" column="67" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="29" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -138,11 +143,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="1652">
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
             </state>
           </provider>
         </entry>
@@ -151,7 +156,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
-              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+              <caret line="45" column="42" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -548,12 +553,14 @@
         <option value="$PROJECT_DIR$/src/main/java/RemoteServer/Model/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/RemoteServer/Connection/Server/TCPServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/RemoteCom/HandleRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataStorage/DataStorage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Client/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Client/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/MultiClientServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/DBHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RemoteCom/HandleRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java" />
       </list>
     </option>
   </component>
@@ -567,28 +574,22 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="412" />
-    <option name="y" value="299" />
-    <option name="width" value="958" />
-    <option name="height" value="627" />
+    <option name="x" value="380" />
+    <option name="y" value="79" />
+    <option name="width" value="1347" />
+    <option name="height" value="771" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
@@ -625,14 +626,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DataStorage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
@@ -679,12 +672,21 @@
               <item name="Connection" type="462c0819:PsiDirectoryNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDB" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Webhandler" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -758,7 +760,10 @@
       <workItem from="1542655136565" duration="86000" />
       <workItem from="1542963517070" duration="7798000" />
       <workItem from="1543141983740" duration="5000" />
-      <workItem from="1543421796869" duration="5784000" />
+      <workItem from="1543421796869" duration="6181000" />
+      <workItem from="1543474404214" duration="3888000" />
+      <workItem from="1543490480066" duration="83000" />
+      <workItem from="1543490780977" duration="3329000" />
     </task>
     <task id="LOCAL-00001" summary="Structure Update">
       <created>1542375579084</created>
@@ -774,11 +779,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543051638565</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Auto Ip Address fix">
+      <created>1543439835014</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543439835018</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33981000" />
+    <option name="totallyTimeSpent" value="41678000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -790,32 +802,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="412" y="299" width="958" height="627" extended-state="0" />
+    <frame x="380" y="79" width="1347" height="771" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3290398" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3984221" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41375545" />
       <window_info anchor="bottom" id="Statistic" order="7" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39969835" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32872504" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32872504" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3984221" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2565284" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30957854" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.2289916" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -823,7 +836,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32934928" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.2289916" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -845,7 +857,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Structure Update" />
     <MESSAGE value="Remote Com Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remote Com Update" />
+    <MESSAGE value="Auto Ip Address fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auto Ip Address fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBHandler.java">
@@ -1014,13 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/RequestList/Lamp.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/RemoteServer/RequestList/Alarm.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Webhandler/Model.java" />
@@ -1033,70 +1039,76 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Model/Request.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/HandleRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/MultiClientServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataStorage/DataStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
+        <state relative-caret-position="510">
           <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
           <folding>
-            <element signature="e#781#782#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="240">
+          <caret line="16" column="52" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="29" column="67" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="29" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/DBHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="1652">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/Connection/Server/MultiClientServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RemoteCom/HandleRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Webhandler/WebHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-830">
+          <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -13,7 +13,7 @@ public class MultiClientServer extends Thread {
         try {
             serverSocket = new ServerSocket(12345);
         } catch (IOException e) {
-            System.out.println("Could not listen on port: 2345");
+            System.out.println("Could not listen on port: 12345");
             System.exit(-1);
         }
         Socket clientSocket = null;

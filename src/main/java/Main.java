@@ -33,7 +33,7 @@ public class Main {
 
         // Main server application needs to be executed before the labHall application starts
         try {
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -42,6 +42,7 @@ public class Main {
 
         Client connection = new Client();
         connection.send(test);
+
 
 
 
