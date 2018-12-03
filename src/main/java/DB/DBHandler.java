@@ -16,8 +16,8 @@ public class DBHandler {
 
     private DBHandler() {
         dbName = "Smarthouse";
-        dbUser = "root";
-        dbPassword = "admin";
+        dbUser = "peter";
+        dbPassword = "123limboMYSQL";
         connectionString = "jdbc:mysql://127.0.0.1/" + dbName + "?user=" + dbUser + "&password=" + dbPassword + "&useSSL=false";
 
         try {
@@ -50,7 +50,7 @@ public class DBHandler {
     public void updateDeviceStatus(String id, String value) {
 
 
-        String query = ("UPDATE device SET Value=? WHERE id =?;");
+        String query = ("UPDATE Device SET Value=? WHERE id =?;");
 
         PreparedStatement ps = null;
         try {
@@ -69,7 +69,7 @@ public class DBHandler {
     public String isSomethingOn(String id) {
 
         int idInt = Integer.parseInt(id);
-        String query = ("Select Value from device where id = ?;");
+        String query = ("Select Value from Device where id = ?;");
 
         PreparedStatement ps = null;
         try {
@@ -90,34 +90,55 @@ public class DBHandler {
         }
     }
 
-    public String login(String email, String passWord) {
+    public String login(String e_mail, String passWord) {
+
+        System.out.println("email "+e_mail);
+        System.out.println("pass "+passWord);
+
         // int idInt = Integer.parseInt(id);
-        String query = ("SELECT userName FROM user where `e-mail` = ? and passWord = ?;");
+        String query = ("SELECT * FROM User WHERE User.email =? AND User.password =?;");
 
-        PreparedStatement ps = null;
+        String result ="";
+
+
+
         try {
-            System.out.println("1");
-            ps = conn.prepareStatement(query);
 
-            ps.setString(1, email);
+
+            PreparedStatement ps = conn.prepareStatement(
+                    "SELECT * FROM User WHERE User.email =? AND User.password =?;");
+
+
+            ps.setString(1, e_mail);
             ps.setString(2, passWord);
 
             ResultSet rs = ps.executeQuery();
 
+
+
             //om användaren finns
             if (rs.next()) {
-                String foundResult = rs.getString("userName");
-                return "exists";
+                result = rs.getString("userName");
+
+
 
                 //om användaren inte finns
-            } else {
-                return "doesn't exist";
-
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return "doesn't exist";
+
+        System.out.println("result String in DB: "+ result);
+
+
+        if (result.isEmpty())
+            return "doesn't exist";
+        else
+
+        return "exists";
+
+
+
     }
 }
 

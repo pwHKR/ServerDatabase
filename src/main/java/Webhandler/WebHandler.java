@@ -2,6 +2,8 @@ package Webhandler;
 
 import DB.DBHandler;
 import DataStorage.DataStorage;
+import RemoteCom.Connection.Client.Client;
+import RemoteCom.Model.Request;
 import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -48,6 +50,7 @@ public class WebHandler {
         public void handle(HttpExchange t) throws IOException {
 
 
+            System.out.println("in operate");
             String response = "Status: Lamp on";
 
             InputStreamReader isr = new InputStreamReader(t.getRequestBody(), "utf-8");
@@ -94,6 +97,7 @@ public class WebHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
 
+            System.out.println("in check device");
             Gson gson = new Gson();
             //get body
             InputStreamReader isr = new InputStreamReader(t.getRequestBody(), "utf-8");
@@ -144,6 +148,8 @@ public class WebHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
 
+            System.out.println("in login user");
+
             Gson gson = new Gson();
             //get body
             InputStreamReader isr = new InputStreamReader(t.getRequestBody(), "utf-8");
@@ -153,8 +159,15 @@ public class WebHandler {
             //String message from server
             String requestBody = br.readLine();
 
-            //System.out.println(requestBody);
+            // Login body contains the java parsed request body
+            Gson gsonLogin = new Gson();
+            LoginBody loginBody = gsonLogin.fromJson(requestBody,LoginBody.class);
+            String userExists = DBHandler.getInstance().login(loginBody.getEmail(), loginBody.getPassword());
 
+
+
+
+            /*
             String userInfo = requestBody.substring(9, requestBody.length()-1);
             //System.out.println(userInfo);
 
@@ -167,8 +180,15 @@ public class WebHandler {
             //System.out.println(email);
             String password = userInfoArray[1].substring(12, userInfoArray[1].length()-1);
             //System.out.println(password);
-            String userExists = DBHandler.getInstance().login(email, password);
+
+         */
+
+
+
+
             t.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
+
+            System.out.println(userExists);
 
             if (userExists.equals("exists")) {
                 //Change message depending on message
@@ -228,8 +248,13 @@ public class WebHandler {
     }
 
     static class ToggleDevice implements HttpHandler {
+
         @Override
         public void handle(HttpExchange t) throws IOException {
+
+
+
+            System.out.println("in toggle device");
 
             Gson gson = new Gson();
             //get body
@@ -240,12 +265,40 @@ public class WebHandler {
             //String message from server
             String requestBody = br.readLine();
 
-            System.out.println(requestBody);
+
+
+
+
+
+
 
             //plockar ut id ur kass jSon string
             String deviceId = requestBody.substring(6,requestBody.length()-1);
 
+
+
+            System.out.println(requestBody);
+
+
+
+
+
+
+
+
+
             System.out.println(deviceId);
+
+            new Thread( new Runnable() {
+                @Override
+                public void run() {
+                    Client newConn = new Client();
+
+                    int id = Integer.valueOf(deviceId.replaceAll("\\D+",""));
+
+                    newConn.send(new Request("tempUpdate",id,"25"));
+                }
+            }).start();
             //TODO: server gruppens egen metod för att läsa ut relevant data från stringen till objekt
 
             //TODO hej ej
@@ -286,7 +339,24 @@ public class WebHandler {
 
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());
+            os.flush(); // added recently
             os.close();
+
+
+        }
+
+        private Request myHandleJsonString(String jsonString) {
+            Gson gson = new Gson();
+            String textJson = gson.toJson(jsonString);
+
+            String[] splittedJson = textJson.split("\\W");
+
+
+            Request request = new Request("updateTemp",Integer.valueOf(splittedJson[11]),
+                    splittedJson[17]);
+
+
+            return request;
         }
     }
 
@@ -295,5 +365,8 @@ public class WebHandler {
         String theJSON = jsonString;
         return theJSON;
     }
+
+
+
 
 }

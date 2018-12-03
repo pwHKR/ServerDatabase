@@ -59,8 +59,10 @@ public class Server extends Thread {
             e.printStackTrace();
         }
         try {
+
             clientSocket.close();
             //out.close();
+
             in.close();
         } catch (IOException ioe) {
             System.out.println("Failed in closing down");

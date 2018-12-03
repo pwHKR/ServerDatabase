@@ -1,5 +1,4 @@
 import DataStorage.DataStorage;
-import RemoteCom.Connection.Client.Client;
 import RemoteCom.Connection.Server.MultiClientServer;
 import RemoteCom.Model.Request;
 import Webhandler.WebHandler;
@@ -22,6 +21,14 @@ public class Main {
         DataStorage.getInstance().setTestLamp(false);
         WebHandler webHandler = new WebHandler();
 
+        try {
+            webHandler.startConnection();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
 
 
 
@@ -40,8 +47,8 @@ public class Main {
 
         // Remote Com Test
 
-        Client connection = new Client();
-        connection.send(test);
+       // Client connection = new Client();
+       // connection.send(test);
 
 
 
