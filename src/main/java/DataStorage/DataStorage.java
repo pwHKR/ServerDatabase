@@ -6,12 +6,7 @@ package DataStorage;
  */
 public class DataStorage {
 
-
     private String clientIP;
-
-
-
-
 
     private boolean testLamp;
 

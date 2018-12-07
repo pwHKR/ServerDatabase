@@ -1,3 +1,4 @@
+import DB.DBHandler;
 import DataStorage.DataStorage;
 import RemoteCom.Connection.Server.MultiClientServer;
 import RemoteCom.Model.Request;
@@ -16,6 +17,10 @@ public class Main {
         // server.run();
         // ComTalker comTalker = new ComTalker();
 
+
+/**
+ *         UTKOMMENTERAT NÄR MARCUS OCH TOBBE TESTAR SQL QUARIES  FRE 7/12
+ *
         DataStorage.getInstance().setLampChange(false);
         DataStorage.getInstance().setLampOn(false);
         DataStorage.getInstance().setTestLamp(false);
@@ -43,40 +48,13 @@ public class Main {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         // Remote Com Test
 
        // Client connection = new Client();
        // connection.send(test);
 
-
-
-
-        //ComTalker comTalker = new ComTalker();
-        /*try {
-
-            webHandler.startConnection();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        System.out.println("Efter startConnection: "+webHandler.getJSON());
-
-        String jsonStringDefault = "{\"type\":\"operate\",\"id\":3}";*/
-        //jsonString = webHandler.getJSON();
-
-       // type = webHandler.myHandleJsonString(jsonString,"type");
-        //id = webHandler.myHandleJsonString(jsonString,"deviceId");
-        //value = webHandler.myHandleJsonString(jsonString,"value");
-
-        /*
-        if(type.equalsIgnoreCase("Operate") && value.equalsIgnoreCase("on")){
-            comTalker.turnLightOn();
-        }
-        if(type.equalsIgnoreCase("Operate") && value.equalsIgnoreCase("off")){
-            comTalker.turnLightOff();
-        }*/
 
 
     }

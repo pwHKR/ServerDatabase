@@ -59,7 +59,6 @@ public class WebHandler {
             String requestBody; // Denna kommer innehålla JSON stringen.
 
 
-
             while ((requestBody = br.readLine()) != null) {
 
                 DataStorage.getInstance().setLampChange(true);
@@ -108,7 +107,7 @@ public class WebHandler {
 
             String requestBody = br.readLine();
 
-            String number = requestBody.substring(6,requestBody.length()-1);
+            String number = requestBody.substring(6, requestBody.length() - 1);
 
             System.out.println(number);
             //TODO: server gruppens egen metod för att läsa ut relevant data från stringen till objekt
@@ -119,7 +118,7 @@ public class WebHandler {
             String response;
 
             //TODO: DBhandler tar vårat id och sätter den devicesens isFavrite värde till 1
-            String dbValue = DBHandler.getInstance().isSomethingOn(number);
+            String dbValue = DBHandler.getInstance().getDeviceValue(number);
             System.out.println(dbValue);
             //This is were the main logic will be
             // if (success) {}
@@ -129,9 +128,7 @@ public class WebHandler {
             if (response != null) {
                 //Change message depending on message
                 t.sendResponseHeaders(200, response.length());
-            }
-
-            else {
+            } else {
                 //Else ( fail) {
                 //Om det inte funkade
                 //Response string
@@ -144,6 +141,7 @@ public class WebHandler {
             os.close();
         }
     }
+
     static class LoginUser implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
@@ -160,8 +158,10 @@ public class WebHandler {
             String requestBody = br.readLine();
 
             // Login body contains the java parsed request body
+            /** {}*/
+
             Gson gsonLogin = new Gson();
-            LoginBody loginBody = gsonLogin.fromJson(requestBody,LoginBody.class);
+            LoginBody loginBody = gsonLogin.fromJson(requestBody, LoginBody.class);
             String userExists = DBHandler.getInstance().login(loginBody.getEmail(), loginBody.getPassword());
 
 
@@ -184,8 +184,6 @@ public class WebHandler {
          */
 
 
-
-
             t.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
 
             System.out.println(userExists);
@@ -196,9 +194,7 @@ public class WebHandler {
                 OutputStream os = t.getResponseBody();
                 os.write(userExists.getBytes());
                 os.close();
-            }
-
-            else {
+            } else {
                 t.sendResponseHeaders(500, userExists.length());
                 OutputStream os = t.getResponseBody();
                 os.write(userExists.getBytes());
@@ -213,7 +209,7 @@ public class WebHandler {
             String response;
 
             //TODO: DBhandler tar vårat id och sätter den devicesens isFavrite värde till 1
-            String dbValue = DBHandler.getInstance().isSomethingOn(deviceId);
+            String dbValue = DBHandler.getInstance().getDeviceValue(deviceId);
             System.out.println(dbValue);
 
             //kollar om värdet är on i databasen eftersom vi behöver veta om det ska ändras
@@ -253,7 +249,6 @@ public class WebHandler {
         public void handle(HttpExchange t) throws IOException {
 
 
-
             System.out.println("in toggle device");
 
             Gson gson = new Gson();
@@ -266,37 +261,23 @@ public class WebHandler {
             String requestBody = br.readLine();
 
 
-
-
-
-
-
-
             //plockar ut id ur kass jSon string
-            String deviceId = requestBody.substring(6,requestBody.length()-1);
-
+            String deviceId = requestBody.substring(6, requestBody.length() - 1);
 
 
             System.out.println(requestBody);
 
 
-
-
-
-
-
-
-
             System.out.println(deviceId);
 
-            new Thread( new Runnable() {
+            new Thread(new Runnable() {
                 @Override
                 public void run() {
                     Client newConn = new Client();
 
-                    int id = Integer.valueOf(deviceId.replaceAll("\\D+",""));
+                    int id = Integer.valueOf(deviceId.replaceAll("\\D+", ""));
 
-                    newConn.send(new Request("tempUpdate",id,"25"));
+                    newConn.send(new Request("tempUpdate", id, "25"));
                 }
             }).start();
             //TODO: server gruppens egen metod för att läsa ut relevant data från stringen till objekt
@@ -309,7 +290,7 @@ public class WebHandler {
             String response;
 
             //TODO: DBhandler tar vårat id och sätter den devicesens isFavrite värde till 1
-            String dbValue = DBHandler.getInstance().isSomethingOn(deviceId);
+            String dbValue = DBHandler.getInstance().getDeviceValue(deviceId);
             System.out.println(dbValue);
 
             //kollar om värdet är on i databasen eftersom vi behöver veta om det ska ändras
@@ -327,9 +308,7 @@ public class WebHandler {
             if (response != null) {
                 //Change message depending on message
                 t.sendResponseHeaders(200, response.length());
-            }
-
-            else {
+            } else {
                 //Else ( fail) {
                 //Om det inte funkade
                 //Response string
@@ -352,7 +331,7 @@ public class WebHandler {
             String[] splittedJson = textJson.split("\\W");
 
 
-            Request request = new Request("updateTemp",Integer.valueOf(splittedJson[11]),
+            Request request = new Request("updateTemp", Integer.valueOf(splittedJson[11]),
                     splittedJson[17]);
 
 
@@ -365,8 +344,6 @@ public class WebHandler {
         String theJSON = jsonString;
         return theJSON;
     }
-
-
 
 
 }

@@ -15,10 +15,12 @@ public class DBHandler {
 
 
     private DBHandler() {
+
         dbName = "Smarthouse";
         dbUser = "peter";
         dbPassword = "123limboMYSQL";
         connectionString = "jdbc:mysql://127.0.0.1/" + dbName + "?user=" + dbUser + "&password=" + dbPassword + "&useSSL=false";
+
 
         try {
 
@@ -47,6 +49,7 @@ public class DBHandler {
         return instance;
     }
 
+
     public void updateDeviceStatus(String id, String value) {
 
 
@@ -66,10 +69,10 @@ public class DBHandler {
 
     }
 
-    public String isSomethingOn(String id) {
+    public String getDeviceValue(String id) {
 
         int idInt = Integer.parseInt(id);
-        String query = ("Select Value from Device where id = ?;");
+        String query = "Select Value from Device where id = ?;";
 
         PreparedStatement ps = null;
         try {
@@ -92,35 +95,27 @@ public class DBHandler {
 
     public String login(String e_mail, String passWord) {
 
-        System.out.println("email "+e_mail);
-        System.out.println("pass "+passWord);
+        System.out.println("email " + e_mail);
+        System.out.println("pass " + passWord);
 
         // int idInt = Integer.parseInt(id);
         String query = ("SELECT * FROM User WHERE User.email =? AND User.password =?;");
 
-        String result ="";
-
-
+        String result = "";
 
         try {
 
-
             PreparedStatement ps = conn.prepareStatement(
                     "SELECT * FROM User WHERE User.email =? AND User.password =?;");
-
 
             ps.setString(1, e_mail);
             ps.setString(2, passWord);
 
             ResultSet rs = ps.executeQuery();
 
-
-
             //om användaren finns
             if (rs.next()) {
                 result = rs.getString("userName");
-
-
 
                 //om användaren inte finns
             }
@@ -128,17 +123,54 @@ public class DBHandler {
             e.printStackTrace();
         }
 
-        System.out.println("result String in DB: "+ result);
-
+        System.out.println("result String in DB: " + result);
 
         if (result.isEmpty())
             return "doesn't exist";
         else
 
-        return "exists";
+            return "exists";
+    }
+
+    public void createUser(String userName, String password, String email) {
+
+        String query = "Insert INTO User VALUES (?,?,?);";
+        PreparedStatement ps = null;
+
+        try {
+            ps = conn.prepareStatement(query);
+
+            ps.setString(1, userName);
+            ps.setString(2, password);
+            ps.setString(3, email);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // När en ny användare skapats, får man... hen/hon... DEN en "egen" favorite-lista skapad.
+        DBHandler.getInstance().createFavoriteDeviceList(userName);
 
 
+    }
 
+    public void createFavoriteDeviceList(String username) {
+
+        for (int i = 97; i < 112; i++) {
+            //Detta kommer skapa devices från 97 till 111 tillhörande inskickade username
+            String query = "INSERT INTO user_has_device VALUES (?," + i + ", 0);";
+
+            PreparedStatement ps = null;
+            try {
+                ps = conn.prepareStatement(query);
+                ps.setString(1, username);
+
+                ps.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
 
