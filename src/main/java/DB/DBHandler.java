@@ -17,8 +17,11 @@ public class DBHandler {
     private DBHandler() {
 
         dbName = "Smarthouse";
-        dbUser = "peter";
-        dbPassword = "123limboMYSQL";
+        //dbName = "Smarthouse";
+        //dbUser = "peter";
+        dbUser = "root";
+        //dbPassword = "123limboMYSQL";
+        dbPassword = "root";
         connectionString = "jdbc:mysql://127.0.0.1/" + dbName + "?user=" + dbUser + "&password=" + dbPassword + "&useSSL=false";
 
 
@@ -171,6 +174,48 @@ public class DBHandler {
                 e.printStackTrace();
             }
         }
+    }
+    public int getUserFavorite(String userName, String deviceId){
+        String query = "SELECT isFavourite from user_has_device where Device_id = ? and User_userName = ?;";
+        PreparedStatement ps = null;
+        int id = Integer.parseInt(deviceId);
+        try {
+            ps = conn.prepareStatement(query);
+
+            ps.setInt(1,id);
+            ps.setString(2,userName);
+
+            ResultSet rs = ps.executeQuery();
+
+            rs.next();
+
+            int foundResult = rs.getInt("isFavourite");
+
+            return foundResult;
+
+        }catch (SQLException e){
+            System.out.println(e);
+        }
+
+        return 0;
+    }
+
+    public void setUserFavorite(String value, String userName, String deviceId){
+     String query = "UPDATE user_has_device SET isFavourite = ? WHERE (User_userName = ?) and (Device_id = ?);";
+
+     PreparedStatement ps = null;
+
+    try{
+        ps = conn.prepareStatement(query);
+        ps.setString(1,value);
+        ps.setString(2,userName);
+        ps.setString(3,deviceId);
+
+        ps.executeUpdate();
+    }catch (SQLException e){
+        System.out.println(e);
+    }
+
     }
 }
 

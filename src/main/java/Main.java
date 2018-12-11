@@ -18,9 +18,7 @@ public class Main {
         // ComTalker comTalker = new ComTalker();
 
 
-/**
- *         UTKOMMENTERAT NÄR MARCUS OCH TOBBE TESTAR SQL QUARIES  FRE 7/12
- *
+
         DataStorage.getInstance().setLampChange(false);
         DataStorage.getInstance().setLampOn(false);
         DataStorage.getInstance().setTestLamp(false);
@@ -48,7 +46,7 @@ public class Main {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
 
         // Remote Com Test
 
