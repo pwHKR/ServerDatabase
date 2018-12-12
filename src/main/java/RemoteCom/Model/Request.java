@@ -7,26 +7,38 @@ import java.util.Date;
 public class Request implements Serializable {
 
     private String type;
-    private int deviceId;
+    private int id;
     private String value;
     private Date time;
+    private boolean isValidated;
 
 
-    public Request(String type, int deviceId, String value) {
+    public Request(String type, int id, String value) {
         this.type = type;
-        this.deviceId = deviceId;
+        this.id = id;
         this.value = value;
 
         time = Calendar.getInstance().getTime();
     }
 
+    public boolean isValidated() {
+        return isValidated;
+    }
+
+    public void setValidated(boolean validated) {
+        isValidated = validated;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 
     public String getType() {
         return type;
     }
 
     public int getDeviceId() {
-        return deviceId;
+        return id;
     }
 
     public String getValue() {
@@ -41,7 +53,7 @@ public class Request implements Serializable {
     public String toString() {
         return "Request{" +
                 "type='" + type + '\'' +
-                ", deviceId=" + deviceId +
+                ", deviceId=" + id +
                 ", value='" + value + '\'' +
                 ", time=" + time +
                 '}';

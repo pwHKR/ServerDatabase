@@ -18,10 +18,10 @@ public class DBHandler {
 
         dbName = "Smarthouse";
         //dbName = "Smarthouse";
-        //dbUser = "peter";
-        dbUser = "root";
-        //dbPassword = "123limboMYSQL";
-        dbPassword = "root";
+        dbUser = "peter";
+       // dbUser = "root";
+        dbPassword = "123limboMYSQL";
+       // dbPassword = "root";
         connectionString = "jdbc:mysql://127.0.0.1/" + dbName + "?user=" + dbUser + "&password=" + dbPassword + "&useSSL=false";
 
 

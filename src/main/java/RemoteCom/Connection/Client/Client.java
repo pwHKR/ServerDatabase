@@ -1,5 +1,6 @@
 package RemoteCom.Connection.Client;
 
+import DataStorage.DataStorage;
 import RemoteCom.Model.Request;
 
 import java.io.IOException;
@@ -23,8 +24,8 @@ public class Client {
 
     private void establishContact() {
         try {
-           socket = new Socket("192.168.0.3", 5001);
-            //socket = new Socket(DataStorage.getInstance().getClientIP(), 5001);
+          // socket = new Socket("192.168.0.3", 5001);
+            socket = new Socket(DataStorage.getInstance().getClientIP(), 5001);
            //socket = new Socket(DataStorage.getInstance().getClientIP(), 5001);
             out = new ObjectOutputStream(socket.getOutputStream());
             //in = new ObjectInputStream(socket.getInputStream());

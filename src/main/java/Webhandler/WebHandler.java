@@ -1,7 +1,6 @@
 package Webhandler;
 
 import DB.DBHandler;
-import DataStorage.DataStorage;
 import RemoteCom.Connection.Client.Client;
 import RemoteCom.Model.Request;
 import com.google.gson.Gson;
@@ -183,7 +182,7 @@ public class WebHandler {
             //String deviceId = requestBody.substring(6, requestBody.length() - 1);
 
             System.out.println("Requestbody: " + requestBody);
-            System.out.println("DeviceID: " + deviceId);
+            System.out.println("toString: " + request.toString());
 
             new Thread(new Runnable() {
                 @Override
@@ -192,7 +191,9 @@ public class WebHandler {
 
                     int id = Integer.valueOf(deviceId.replaceAll("\\D+", ""));
 
-                    newConn.send(new Request("tempUpdate", id, "25"));
+
+
+                    newConn.send(new Request("tempUpdate", request.getDeviceId(), "25"));
                 }
             }).start();
             //TODO: server gruppens egen metod för att läsa ut relevant data från stringen till objekt
