@@ -18,9 +18,9 @@ public class Main {
 
 
 
-        DataStorage.getInstance().setLampChange(false);
+       /* DataStorage.getInstance().setLampChange(false);
         DataStorage.getInstance().setLampOn(false);
-        DataStorage.getInstance().setTestLamp(false);
+        DataStorage.getInstance().setTestLamp(false);*/
         WebHandler webHandler = new WebHandler();
 
         try {

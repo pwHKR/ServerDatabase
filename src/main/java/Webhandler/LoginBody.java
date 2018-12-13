@@ -2,14 +2,16 @@ package Webhandler;
 
 public class LoginBody {
 
-    private String type, email,password;
+    private String type, email,password,userName;
 
 
     public String getType() {
         return type;
     }
 
-
+    public String getUserName() {
+        return userName;
+    }
 
     public String getEmail() {
         return email;

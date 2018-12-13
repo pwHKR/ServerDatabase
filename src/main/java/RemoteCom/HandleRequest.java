@@ -21,6 +21,10 @@ public class HandleRequest {
                 handleTemp(request);
                 break;
 
+            case "toggleDevice":
+                setTemp(request);
+                break;
+
             default:
 
                 System.out.println("invalid request");
@@ -51,6 +55,11 @@ public class HandleRequest {
 
         System.out.println("Request sent " + request.getTime());
         System.out.println("Update temprature on website to " + request.getValue());
+
+    }
+
+    private void setTemp(Request request){
+
 
     }
 }
