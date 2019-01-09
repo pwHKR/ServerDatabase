@@ -49,6 +49,10 @@ public class Request implements Serializable {
         return time;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Request{" +
@@ -58,4 +62,5 @@ public class Request implements Serializable {
                 ", time=" + time +
                 '}';
     }
+
 }

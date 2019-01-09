@@ -1,6 +1,10 @@
 package RemoteCom;
 
+import DB.DBHandler;
+import DataStorage.DataStorage;
 import RemoteCom.Model.Request;
+
+import javax.xml.crypto.Data;
 
 public class HandleRequest {
     public HandleRequest() {
@@ -25,6 +29,7 @@ public class HandleRequest {
                 setTemp(request);
                 break;
 
+
             default:
 
                 System.out.println("invalid request");
@@ -43,10 +48,13 @@ public class HandleRequest {
 
     private void handleDBCall(Request request){
 
-        System.out.println("Reqeust sent " + request.getTime());
+        System.out.println("In handle DB Call (Handle Request)");
+
+        System.out.println(request.toString());
 
 
-       // DBHandler.getInstance().updateLampStatus(request);
+        DBHandler.getInstance().updateDeviceStatus(String.valueOf(request.getDeviceId()),request.getValue());
+        DataStorage.getInstance().setDBUpdated(true);
 
     }
 

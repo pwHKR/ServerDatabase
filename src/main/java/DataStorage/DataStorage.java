@@ -10,6 +10,11 @@ public class DataStorage {
 
     private boolean testLamp;
 
+    public boolean isDBUpdated;
+
+    public void setDBUpdated(boolean DBUpdated) {
+        isDBUpdated = DBUpdated;
+    }
 
     public boolean isTestLamp() {
         return testLamp;

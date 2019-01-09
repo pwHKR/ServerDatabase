@@ -43,8 +43,9 @@ public class Server extends Thread {
                     remote = (Request) in.readObject();
                     System.out.println(remote.toString());
 
+                    // Ändrar
                     handle.handle(remote);
-                    handle.writeToLogFile(remote);
+                   // handle.writeToLogFile(remote);
 
 
                 } catch(IOException ex){ ex.printStackTrace();

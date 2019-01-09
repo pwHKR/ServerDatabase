@@ -16,12 +16,12 @@ public class DBHandler {
 
     private DBHandler() {
 
+        //dbName = "PersonDB";
         dbName = "Smarthouse";
-        //dbName = "Smarthouse";
         dbUser = "peter";
-       // dbUser = "root";
+        //dbUser = "root";
         dbPassword = "123limboMYSQL";
-       // dbPassword = "root";
+        //dbPassword = "root";
         connectionString = "jdbc:mysql://127.0.0.1/" + dbName + "?user=" + dbUser + "&password=" + dbPassword + "&useSSL=false";
 
 

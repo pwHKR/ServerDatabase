@@ -1,6 +1,7 @@
 package Webhandler;
 
 import DB.DBHandler;
+import DataStorage.DataStorage;
 import RemoteCom.Connection.Client.Client;
 import RemoteCom.Model.Request;
 import com.google.gson.Gson;
@@ -42,6 +43,7 @@ public class WebHandler {
         server.createContext("/loginUser", new LoginUser());
         server.createContext("/setTemp", new SetTemp());
         server.createContext("/registerUser", new RegisterUser());
+        server.createContext("/checkCurrentDatabase", new CheckCurrentDatabase());
         server.setExecutor(null); // creates a default executor
         server.start();
 
@@ -51,7 +53,6 @@ public class WebHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
 
-            System.out.println("in check device");
             Gson gson = new Gson();
             //get body
             InputStreamReader isr = new InputStreamReader(t.getRequestBody(), "utf-8");
@@ -61,13 +62,36 @@ public class WebHandler {
             String requestBody = br.readLine();
             Request request = gson.fromJson(requestBody, Request.class);
             String deviceId = String.valueOf(request.getDeviceId());
-            System.out.println(deviceId);
+            System.out.println("Check deviceID: " + deviceId);
 
             t.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
             String response;
 
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+
+
+
+                    Client client = new Client();
+
+                    // Will check a value on the arduino in "labhall". Will later send it back to ServerDatabase
+                    // and update the database with current database.
+
+                    // The boolean will be used to check if the database has been updated
+                    DataStorage.getInstance().setDBUpdated(false);
+                    client.send(new Request("getDeviceStatus",request.getDeviceId(),request.getValue()));
+                }
+            }).start();
+
+            //check if the database has been updated
+            while (DataStorage.getInstance().isDBUpdated == false) {
+                // Is idle on purpose
+            }
+            // Check the updated database value and send it to the webpage.
             String dbValue = DBHandler.getInstance().getDeviceValue(deviceId);
-            System.out.println(dbValue);
+            //System.out.println(dbValue);
 
             response = dbValue;
             if (response != null) {
@@ -98,12 +122,12 @@ public class WebHandler {
             String requestBody = br.readLine();
 
 
-            new Thread(new Runnable() {
+            /*new Thread(new Runnable() {
                 @Override
                 public void run() {
 
                 }
-            });
+            });*/
 
             Gson gsonLogin = new Gson();
             LoginBody loginBody = gsonLogin.fromJson(requestBody, LoginBody.class);
@@ -183,7 +207,7 @@ public class WebHandler {
 
 
 
-                    newConn.send(new Request(request.getType(), request.getDeviceId(), newRequestValue));
+                    newConn.send(new Request("toggleDevice", request.getDeviceId(), newRequestValue));
                 }
             }).start();
             //This is were the main logic will be
@@ -246,7 +270,6 @@ public class WebHandler {
                 @Override
                 public void run() {
                     Client newConn = new Client();
-
                     int id = Integer.valueOf(deviceId.replaceAll("\\D+", ""));
 
 
@@ -319,6 +342,42 @@ public class WebHandler {
             os.close();
 
 
+        }
+    }
+    static class CheckCurrentDatabase implements HttpHandler {
+
+        @Override
+        public void handle(HttpExchange t) throws IOException {
+            System.out.println("in checkDatabase");
+            Gson gson = new Gson();
+            //get body
+            InputStreamReader isr = new InputStreamReader(t.getRequestBody(), "utf-8");
+            BufferedReader br = new BufferedReader(isr);
+
+            //String message from webclient
+            String requestBody = br.readLine();
+            Request request = gson.fromJson(requestBody, Request.class);
+            String deviceId = String.valueOf(request.getDeviceId());
+            System.out.println("DeviceID to check: "+deviceId);
+
+            t.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
+            String response;
+
+            String dbValue = DBHandler.getInstance().getDeviceValue(deviceId);
+            System.out.println("Value of DeviceID " + deviceId + ": " + dbValue);
+
+            response = dbValue;
+            if (response != null) {
+                t.sendResponseHeaders(200, response.length());
+            } else {
+                response = "Didn't work";
+                t.sendResponseHeaders(200, response.length());
+            }
+
+            //Here will the DBrespons be sent to webserver.
+            OutputStream os = t.getResponseBody();
+            os.write(response.getBytes());
+            os.close();
         }
     }
 }
